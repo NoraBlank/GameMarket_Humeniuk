@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(216, 176, 123);
+    display: flex;
+    font-size: 30px;
+    div{
+        border: 2px solid red;
+        border-radius: 5px;
+    }
+}
