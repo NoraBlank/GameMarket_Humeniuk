@@ -1,28 +1,62 @@
-//Перевірка підключенного файлу скриптів
-console.log("Перевірка")
+let itemsArray=['Газонокосарка 43',
+'Електричний тример 110',
+'Електрична газонокосарка 32',
+'Акумуляторний оприскувач 12 N',
+ 'Газонокосарка 430',
+ 'Електричний тример 130',
+'Елекртична газонокосарка 320',
+ 'Акамуляторний оприскувач 12 E',
+]
 
-//отримання елементу з ідентифікатором items
+
+
+//console.log('Перевірка')
+
 let itemsDiv = document.getElementById("items");
 
-//перевірка існування знайденого блоку
-if (itemsDiv) {
-    //вивід знайденого елементу
-    console.log(itemsDiv)
-    // console.log("Поле classList: ", itemsDiv.classList)
-    // console.log("Поле id: ", itemsDiv.id)
-    // console.log("Поле clientWidth: ", itemsDiv.clientWidth)
-    // console.log("Поле innerHTML: ", itemsDiv.innerHTML)
+//console.log(itemDiv)
 
-    // itemsDiv.innerText = "Перший програмно доданий текст"
-    // itemsDiv.innerText += "Другий програмно доданий текст"
-    // itemsDiv.innerHTML = "<div class = item></div>"
-    // itemsDiv.innerHTML = "<div class = item></div>"
-    // itemsDiv.innerHTML = "<div class = item></div>"
-    // itemsDiv.innerHTML = "<div class = item></div>"
-    for (let i = 0; i < 100; i++) {
-        itemsDiv.innerHTML += "<div class = 'item'></div>"
-    }
-} else {
-    //вивід повідомлення про не знайденний блок
-    console.log("Блок товарів не знайдено")
+if(itemsDiv){
+
+    //  console.log(itemDiv)
+    // // console.log("Поле classList:",itemDiv.classList)
+    // // console.log("Поле id:",itemDiv.id)
+    // // console.log("Поле clientWidth:",itemDiv.clientWidth)
+    // // console.log("Поле innerHTML:",itemDiv.innerHTML)
+
+    // // itemDiv.innerText="Програмно доданий текст"
+    // // itemDiv.innerText+="Програмно доданий текст№2"
+
+    // itemDiv.innerHTML+='<div class= "item"></div>'
+   
+    // itemDiv.innerHTML+='<div class= "item"></div>'
+   
+    // itemDiv.innerHTML+='<div class= "item"></div>'
+   
+    // itemDiv.innerHTML+='<div class= "item"></div>'
+   
+    // for(let i=0; i<100; i++){
+    //     itemDiv.innerHTML+='<div class="item"></div>'
+    // }
+itemsArray.forEach((item,index) =>{
+    itemsDiv.innerHTML += 
+    `<div class ="item">
+        <h2>Товар №${index+1} з ${itemsArray.length}</h2>
+         <p>${item}</p>
+    </div>
+    `
+})
+
+
+
+}else{
+    console.log("NOt found")
 }
+
+
+
+
+// itemsArray=itemsArray.sort()
+// for(let i=0; i<itemsArray.length;i++){
+//     console.log(i+ '-й елемент',itemsArray[i])
+// }
